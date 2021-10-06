@@ -17,15 +17,17 @@ document.getElementById('add-gb').addEventListener('click', function() {
     
     console.log('Ginger bread + button was clicked!')
 
-    
-    document.getElementById('qty-gb').textContent =gb++
+    document.getElementById('qty-gb').textContent = gb++;
+    document.getElementById ('qty-total').textContent = gb + cc + sugar
+    document.getElementById('qut-total').textContent = gb - cc - sugar
+
 })
 
 document.getElementById('minus-gb').addEventListener('click',function() {
     
     console.log ('Ginger bread - botton was clicked! ')
     
-    if (gb !=0) {
+    if (gb >= 0) {
         document.getElementById('qty-gb').textContent = gb--
     }
 })
@@ -42,13 +44,15 @@ document.getElementById('add-cc').addEventListener('click', function() {
 
     
     document.getElementById('qty-cc').textContent =cc++
+
+    document.getElementById ('qty-total').textContent = gb + cc + sugar
 })
 
 document.getElementById('minus-cc').addEventListener('click',function() {
 
     console.log ('Chocolate Chip - botton was clicked! ')
     
-    if (cc !=0) {
+    if (cc >=0) {
         document.getElementById('qty-cc').textContent = cc--
     }
 })
@@ -61,13 +65,15 @@ document.getElementById('add-sugar').addEventListener('click', function() {
 
     
     document.getElementById('qty-sugar').textContent =sugar++
+
+    document.getElementById ('qty-total').textContent = gb + cc + sugar
 })
 
 document.getElementById('minus-sugar').addEventListener('click',function() {
 
     console.log ('Sugar Sprinkle - botton was clicked! ')
     
-    if (sugar !=0) {
+    if (sugar >=0) {
         document.getElementById('qty-sugar').textContent = sugar--
 
     }
@@ -76,19 +82,19 @@ document.getElementById('minus-sugar').addEventListener('click',function() {
 //
 
 
-document.getElementById('add-gb,add-sugar,add-cc').addEventListener('click', function() {
+//document.getElementById('add-gb,add-sugar,add-cc').addEventListener('click', function() {
 
-    console.log ('Cookie added to total') 
+  //  console.log ('Cookie added to total') 
 
-    document.getElementById ('qty-total').textContent =total++
-})
+    //document.getElementById ('qty-total').textContent =total++
+//})
 
-document.getElementById('minus-cc,minus-sugar,minus-gb') .addEventListener ('click',function() {  
+//document.getElementById('minus-cc,minus-sugar,minus-gb') .addEventListener ('click',function() {  
 
-    if (total !=0) {
-        document.getElementById('qty-total').textContent =total--
-    }
-})
+  //  if (total !=0) {
+  //      document.getElementById('qty-total').textContent =total--
+    //}
+//})
 
 
 
